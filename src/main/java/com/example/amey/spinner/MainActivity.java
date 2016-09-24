@@ -11,14 +11,15 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-Spinner spinner;
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Spinner spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spinner= (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter adapter=ArrayAdapter.createFromResource(this,R.array.days,android.R.layout.simple_spinner_dropdown_item);
+        spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.days, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
@@ -26,13 +27,18 @@ Spinner spinner;
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        TextView t= (TextView) view;
-String a=t.toString();
-        Toast.makeText(this, " item selected was"+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
+        TextView t = (TextView) view;
+        String a = t.toString();
+        Toast.makeText(this, " item selected was" + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-Toast.makeText(this,"no",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "no", Toast.LENGTH_LONG).show();
+    }
+
+
+    public void test() {
+
     }
 }
