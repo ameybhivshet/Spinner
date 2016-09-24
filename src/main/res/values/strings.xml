@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Spinner</string>
+
+    <string-array name="days">
+
+        <item>Monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+        <item>sunday</item>
+    </string-array>
+</resources>
